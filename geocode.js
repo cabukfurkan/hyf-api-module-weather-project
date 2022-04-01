@@ -5,8 +5,7 @@ export async function getCoordinates(input) {
     const response = await result.json();
 
     const { lat, lon } = response[0];
-    // console.log(lat);
-    // console.log(lon);
+
     const coordinates = { lat, lon }
     return coordinates
 }

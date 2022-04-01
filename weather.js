@@ -7,8 +7,6 @@ export async function getCurrentWeather(lat, lon) {
     const name = response.name;
     const desc = response.weather[0].description;
     const temp = (response.main.temp - 273.15).toFixed(0);
-    // const description = json.
-
     return { name, desc, temp };
 }
 

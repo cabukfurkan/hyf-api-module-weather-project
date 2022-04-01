@@ -1,7 +1,5 @@
 "use strict"
 
-// if (!inputValue.value)
-
 import { getCoordinates } from './geocode.js';
 import { getCurrentWeather } from './weather.js';
 
@@ -27,8 +25,6 @@ async function main() {
             alert("please enter a city")
         }
     })
-
-
 }
 
 addEventListener("load", main)
