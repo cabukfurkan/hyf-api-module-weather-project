@@ -10,7 +10,6 @@ export async function speak(name, temp, desc) {
     const toSpeak = await new SpeechSynthesisUtterance(`${name}. Temperature is ${temp} degree. ${desc} is waiting you. ${wish}`)
     window.speechSynthesis.onvoiceschanged = () => {
         const voices = window.speechSynthesis.getVoices()
-        console.log(voices);
         toSpeak.voice = voices[1]
     };
     window.speechSynthesis.speak(toSpeak);
