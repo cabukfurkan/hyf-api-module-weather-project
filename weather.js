@@ -1,6 +1,8 @@
+const apiKey = "57cacb49a5dbb78e0f2308ad919e4b6c"
+const encodedApiKey = btoa(apiKey)
 
 export async function getCurrentWeather(lat, lon) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=57cacb49a5dbb78e0f2308ad919e4b6c`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${atob(encodedApiKey)}`
 
     const result = await fetch(url);
     const response = await result.json();

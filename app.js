@@ -2,6 +2,7 @@
 
 import { getCoordinates } from './geocode.js';
 import { getCurrentWeather } from './weather.js';
+import { speak } from './speak.js'
 
 const inputValue = document.querySelector('.inputValue')
 const button = document.querySelector('.button')
@@ -20,6 +21,8 @@ async function main() {
             cityName.innerHTML = `${name}`
             temperature.innerHTML = `${temp}`
             description.innerHTML = `${desc}`;
+
+            speak(name, temp, desc);
 
         } catch (error) {
             alert("please enter a city")
