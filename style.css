@@ -2,11 +2,20 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
   text-align: center;
   min-height: 100vh;
   background-color: #95d1cc;
+}
+.news-div{
+  overflow: hidden;
+}
+.news-div p{
+  animation: marquee 50s linear infinite;
+  white-space: nowrap;
+}
+@keyframes marquee {
+  from {transform: translateX(100%); }
+  to {transform: translateX(-100%); }
 }
 .weather-div {
   padding-top: 50px;

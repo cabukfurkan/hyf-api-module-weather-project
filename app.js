@@ -4,11 +4,13 @@ import { getCoordinates } from './src/geocode.js';
 import { getCurrent } from './src/currentWeather.js';
 import { speak } from './src/speak.js'
 import { getHourly } from './src/hourlyWeather.js';
+import { getNews } from './src/news.js';
 
 const inputValue = document.querySelector('.inputValue')
 const button = document.querySelector('.button')
 
 async function main() {
+    await getNews();
     button.addEventListener('click', async () => {
         try {
             const { lat, lon } = await getCoordinates(inputValue.value);
@@ -16,7 +18,6 @@ async function main() {
             inputValue.value = "";
             speak(name, temp, desc);
             getHourly(id)
-
         } catch (error) {
             alert("please enter a city")
         }
