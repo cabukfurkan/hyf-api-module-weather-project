@@ -9,8 +9,9 @@ body {
   background-color: #95d1cc;
 }
 .current-weather-div {
-  padding-top: 100px;
+  padding-top: 50px;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

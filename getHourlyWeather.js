@@ -14,7 +14,7 @@ export async function getHourly(id) {
 
     for (let i = 0; i < response.list.length; i++) {
         const hourAsInteger = parseInt(response.list[i].dt_txt.split(" ")[1].split(":")[0])
-        const temp = response.list[i].main.temp
+        const temp = (response.list[i].main.temp - 273.15).toFixed(0)
         const desc = response.list[i].weather[0].description
 
         perHourWeatherDiv = createHourlyWeatherDiv(hourAsInteger, temp, desc)
