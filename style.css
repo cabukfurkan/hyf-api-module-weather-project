@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   background-color: #95d1cc;
 }
-.current-weather-div {
+.weather-div {
   padding-top: 50px;
   width: 100%;
   height: auto;
