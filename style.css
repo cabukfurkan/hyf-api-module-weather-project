@@ -5,11 +5,11 @@ body {
   display: flex;
   flex-direction: row;
   text-align: center;
-  max-height: 100vh;
+  min-height: 100vh;
   background-color: #95d1cc;
 }
-.left-div {
-  padding-top: 200px;
+.current-weather-div {
+  padding-top: 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,16 +39,27 @@ input[type="submit"] {
   font-size: 20px;
   border-radius: 2px;
 }
-p {
-  visibility: hidden;
-}
+
 .name,
 .temperature,
 .description {
   font-size: 2rem;
   font-weight: bold;
 }
+
 .degree {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.hourly-weather-div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.per-hour-weather-info{
+  width: 12%;
+  border: 1px solid black;
 }
