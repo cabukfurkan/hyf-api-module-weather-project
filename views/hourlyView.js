@@ -5,7 +5,7 @@
  * @returns {Element}
  */
 
-export const createHourlyWeatherDiv = (hour, temp, desc) => {
+export const createHourlyWeatherView = (hour, temp, desc) => {
     const hourlyDiv = document.createElement('div')
     hourlyDiv.classList.add('per-hour-weather-info')
     const hourlyWeatherHour = document.createElement('p');
