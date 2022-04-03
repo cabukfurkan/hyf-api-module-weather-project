@@ -6,6 +6,7 @@ const encodedApiKey = btoa(apiKey)
 const currentWeatherDiv = document.querySelector('.current-weather-div')
 
 export async function getCurrent(lat, lon) {
+    currentWeatherDiv.innerHTML = ''
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${atob(encodedApiKey)}`
 
     const result = await fetch(url);

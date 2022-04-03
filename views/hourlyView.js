@@ -13,7 +13,7 @@ export const createHourlyWeatherView = (hour, temp, desc) => {
     hourlyDiv.appendChild(hourlyWeatherHour)
 
     const hourlyWeatherTemp = document.createElement('p');
-    hourlyWeatherTemp.innerHTML = String.raw`<p class="hourly-div-p">${temp}</p>`;
+    hourlyWeatherTemp.innerHTML = String.raw`<p class="hourly-div-p">${temp}&#176;</p>`;
     hourlyDiv.appendChild(hourlyWeatherTemp)
 
     const hourlyWeatherDesc = document.createElement('p');
