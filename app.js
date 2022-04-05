@@ -11,7 +11,11 @@ const inputValue = document.querySelector('.inputValue')
 const button = document.querySelector('.button')
 
 async function main() {
-    await getNews();
+    try {
+        await getNews();
+    } catch (error) {
+        console.error(error)
+    }
     button.addEventListener('click', async () => {
         try {
             const { lat, lon } = await getCoordinates(inputValue.value);
