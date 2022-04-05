@@ -76,3 +76,9 @@
     ├── hourlyView.js
     └── newsViews.js
 ```
+
+---
+
+## Note
+
+_[News api](https://newsdata.io/pricing) has a limit of 200 request per a day for free subscription so after 200 request news api won't work_ 🥹
