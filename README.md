@@ -2,8 +2,6 @@
 
 ## How does application works?
 
----
-
 1. Into **text field** a **city name** is entered.
 
 1. Entered city name is used by [geocoding api](https://openweathermap.org/api/geocoding-api#:~:text=Geocoding%20API%20is%20a%20simple,integrated%20in%20all%20OpenWeather%20APIs.).
